@@ -1,171 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make a Payment</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-
-    
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: url('images/background.jpg') no-repeat center center/cover;
-    color: #333;
-    min-height: 100vh;
-    }
-
-
-    .overlay {
-      background-color: rgba(255, 255, 255, 0.9);
-      min-height: 100vh;
-      padding: 50px 20px;
-    }
-
     .container {
-      display: flex;
-      max-width: 1000px;
-      margin: auto;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .cart {
-      flex: 2;
-      background: #fff;
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .cart h2 {
-      margin-bottom: 20px;
-    }
-
-    .cart-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .cart-item:last-child {
-      border-bottom: none;
-    }
-
-    .item-info {
-      display: flex;
-      align-items: center;
-    }
-
-    .item-info img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      margin-right: 15px;
-      border-radius: 8px;
-    }
-
-    .item-name {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    .price {
-      font-size: 16px;
-    }
-
-    .payment {
-      flex: 1;
-      background: linear-gradient(135deg, #1f2937, #374151);
-      color: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .payment h3 {
-      margin-bottom: 20px;
-    }
-
-    .pay-method {
-      margin-bottom: 30px;
-    }
-
-    .pay-method p {
-      margin-bottom: 10px;
-    }
-
-    .button-link {
-      display: block;
       text-align: center;
-      background-color: #3b82f6;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .pay-button {
+      display: block;
+      margin: 20px auto;
+      background-color: #528FF0;
       color: white;
+      padding: 15px 25px;
       text-decoration: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px;
       transition: background-color 0.3s;
+      width: 200px;
     }
-
-    .button-link:hover {
-      background-color: #2563eb;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
+    .pay-button:hover {
+      background-color: #417de0;
     }
   </style>
 </head>
 <body>
-
-  <div class="overlay">
-    <div class="container">
-      <!-- Cart Section -->
-      <div class="cart">
-        <h2>Shopping Cart</h2>
-
-        <!-- Water Bottle -->
-        <div class="cart-item">
-          <div class="item-info">
-            <img src="https://cdn.pixabay.com/photo/2014/04/03/00/38/water-309638_960_720.png" alt="Water Bottle" />
-            <div class="item-name">Water Bottle</div>
-          </div>
-          <div class="price">₹10</div>
-        </div>
-
-        <!-- Coin -->
-        <div class="cart-item">
-          <div class="item-info">
-            <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/coin-1239428_960_720.png" alt="Coin" />
-            <div class="item-name">Coin</div>
-          </div>
-          <div class="price">₹1</div>
-        </div>
-      </div>
-
-      <!-- Payment Section -->
-      <div class="payment">
-        <h3>Payment Info</h3>
-
-        <div class="pay-method">
-          <p>Pay for Water Bottle:</p>
-          <a href="https://rzp.io/l/NMX5vHHN" class="button-link">Pay ₹10</a>
-        </div>
-
-        <div class="pay-method">
-          <p>Pay for Coin:</p>
-          <a href="https://rzp.io/rzp/hVigxqba" class="button-link">Pay ₹1</a>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <h2>Make a Secure Payment</h2>
+    <p>Select an amount to proceed to payment:</p>
+    
+    <a href="https://rzp.io/rzp/hVigxqba" target="_blank" class="pay-button">Pay ₹1</a>
+    <a href="https://rzp.io/l/NMX5vHHN" target="_blank" class="pay-button">Pay ₹10</a>
   </div>
-
 </body>
 </html>
