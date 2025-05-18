@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Make a Payment</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('images/background.jpg') no-repeat center center fixed;
       background-size: cover;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     .container {
@@ -22,16 +26,19 @@
       gap: 30px;
       padding: 20px;
       flex-wrap: wrap;
-      background: rgba(255, 255, 255, 0.9); /* slight white overlay for readability */
+      /* background: rgba(255, 255, 255, 0.9); */
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      max-width: 1000px;
+      width: 100%;
     }
 
     .card {
       background: white;
       width: 250px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
       overflow: hidden;
       transition: transform 0.3s;
@@ -83,6 +90,38 @@
 
     .pay-button:hover {
       background-color: #417de0;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 20px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+      }
+
+      .card p {
+        font-size: 13px;
+      }
+
+      .pay-button {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
