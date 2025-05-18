@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Make a Payment</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
     .container {
-      text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.9); /* slight white overlay for readability */
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
-    .pay-button {
+
+    .card {
+      background: white;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
       display: block;
-      margin: 20px auto;
+    }
+
+    .card h3 {
+      margin: 10px 15px 2px;
+      font-size: 20px;
+      color: #2c3e50;
+      letter-spacing: 0.5px;
+    }
+
+    .card .subtext {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      padding: 0 15px 10px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .pay-button {
+      display: inline-block;
+      margin: 15px auto 20px;
       background-color: #528FF0;
       color: white;
-      padding: 15px 25px;
+      padding: 12px 20px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 15px;
       border-radius: 5px;
       transition: background-color 0.3s;
-      width: 200px;
     }
+
     .pay-button:hover {
       background-color: #417de0;
     }
@@ -39,11 +88,23 @@
 </head>
 <body>
   <div class="container">
-    <h2>Make a Secure Payment</h2>
-    <p>Select an amount to proceed to payment:</p>
-    
-    <a href="https://rzp.io/rzp/hVigxqba" target="_blank" class="pay-button">Pay ₹1</a>
-    <a href="https://rzp.io/l/NMX5vHHN" target="_blank" class="pay-button">Pay ₹10</a>
+    <!-- ₹25 Item -->
+    <div class="card">
+      <img src="images/coke.jpg" alt="Coca-Cola 180ml">
+      <h3>Coca-Cola</h3>
+      <span class="subtext">180ml</span>
+      <p>Enjoy the classic, refreshing taste of Coca-Cola in a compact 180ml pack. Made with the signature blend of carbonated water, sugar, and natural flavors, it's the perfect fizzy drink to uplift your mood anytime, anywhere.</p>
+      <a href="https://rzp.io/rzp/hVigxqba" target="_blank" class="pay-button">Pay ₹25</a>
+    </div>
+
+    <!-- ₹50 Item -->
+    <div class="card">
+      <img src="images/nescafe.webp" alt="Nescafe Latte 180ml">
+      <h3>Nescafe Latte</h3>
+      <span class="subtext">180ml</span>
+      <p>Nescafe Iced Latte is a smooth and creamy cold coffee blend served in a 180ml can. It combines the rich flavor of Nescafe coffee with chilled milk for a ready-to-drink experience that’s both refreshing and satisfying.</p>
+      <a href="https://rzp.io/l/NMX5vHHN" target="_blank" class="pay-button">Pay ₹50</a>
+    </div>
   </div>
 </body>
 </html>
